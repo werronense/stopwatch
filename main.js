@@ -15,9 +15,10 @@ start.onclick = () => {
 
 stop.onclick = () => {
   start.disabled = false;
-  if (startTime) {
+  if (startTime && stopwatch) {
     savedSeconds += getSeconds();
     clearInterval(stopwatch);
+    stopwatch = '';
   }
 }
 
@@ -27,6 +28,7 @@ reset.onclick = () => {
   clock.textContent = '00:00:00';
   start.disabled = false;
   clearInterval(stopwatch);
+  stopwatch = '';
 }
 
 function getSeconds() {
