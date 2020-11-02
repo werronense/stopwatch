@@ -3,23 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Simple setInterval clock</title>
-    <style>
-      p {
-        font-family: sans-serif;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" charset="utf-8" defer></script>
   </head>
   <body>
     <p class="clock"></p>
-    <script>
-      function displayTime() {
-        let date = new Date();
-        let time = date.toLocaleTimeString();
-        document.querySelector('.clock').textContent = time;
-      }
-
-      displayTime();
-      const createClock = setInterval(displayTime, 1000);
-    </script>
   </body>
 </html>
